@@ -1,0 +1,117 @@
+<div ng-app="pager" ng-controller="pageController">
+    <div ng-show="pageId == '1'" class="body container">
+        <section>
+             <h1>Beginning...</h1>
+
+            <p>Your friend's house <i>is</i> still many miles away, and the rain is falling harder as each moment passes. You could wait in the car and listen to the radio, and perhaps the storm would let up.</p>
+            <p>The sky splits into two skies as it opens up in lighting sheets, lighting first itself and then the ground, and it seems that the sky divides but increases in size with each flash.</p>
+            <aside>Can sounds actually be deafening?</aside>
+            <p>Please note in this example how tools like jsFiddle and github allow you to "view source", to dig deeper into the fibre of the content. The templating library used here, AngularJS, allows you to create new tags, so beyond "p" and "section", you can see "aside" and "choose" tags</p>
+        </section>
+        <div class="footer">
+            <choose page="2" desc="walk to your friend's house"></choose>
+            <choose page="4" desc="stay in the car"></choose>
+        </div>
+    </div>
+    <div ng-show="pageId == '2'" class="body container">
+        <section>
+            <p>You get out of the car, and start to walk down the lonely highway. It is a while, but soon you see a gas station nearby. It looks like it might be deserted. It is hard to tell.</p>
+            <p>The storm has lessened now, and the clouds have abandoned the moon to prying eyes. The moon is white and very cold in the evening sky in the wake of the storm.</p>
+            <p>When the storm has passed, never forget, you may be still in its eye. The storm is not blind; the storm has one eye.</p>
+        </section>
+        <div class="footer">
+            <choose page="5" desc="keep walking"></choose>
+            <choose page="8" desc="investigate the gas station"></choose>
+        </div>
+    </div>
+    <div ng-show="pageId == '3'" class="body container">
+        <section>
+            <p>You insert your quarter into the payphone, and dial the number for the cab company. Beep. Ring. A message comes over the receiver... telling you that no cabs are available, due to the thunderstorm.</p>
+            <aside>And that was your only quarter.</aside>
+        </section>
+        <div class="footer">
+            <choose page="1" desc="go back to the beginning"></choose>
+        </div>
+    </div>
+    <div ng-show="pageId == '4'" class="body container">
+        <section>
+            <p>You stay in your car. The radio allows you to listen for weather updates. It sounds like this storm will go on for a long time. But... now... your battery is running out.</p>
+        </section>
+        <div class="footer">
+            <choose page="1" desc="go back to the beginning"></choose>
+            <choice page="6" desc="listen to the radio" moxie="+1"></choice>
+        </div>
+    </div>
+    <div ng-show="pageId == '5' && mojo != 0" class="body container">
+        <section>
+            <p>You keep walking to your friend's house, but you have no snacks and you are very hungry...</p>
+            <p>It's going to be a long walk.</p>
+        </section>
+        <div class="footer">
+            <choose page="5" desc="keep walking" mojo="-1"></choose>
+        </div>
+    </div>
+    <div ng-show="pageId == '5' && mojo == 0" class="body container">
+        <section>
+            <p>You cannot walk any further. If you had only had some snacks, you might have made it, but sadly you just can't bear to walk another step. Better luck next time.</p>
+        </section>
+        <div class="footer">
+            <choose page="1" desc="go back to the beginning"></choose>
+        </div>
+    </div>
+    <div ng-show="pageId == '6'" class="body container">
+        <section>
+            <p>Listening to the radio is not so bad, actually. Eventually your battery will run out, but it's not like you were going anywhere with a flat tire anyway.</p>
+        </section>
+        <div class="footer">
+            <choice page="6" desc="keep listening to the radio" moxie="+1" money="-1"></choice>
+            <choose page="2" desc="get out of the car">
+                </choice>
+        </div>
+    </div>
+    <div ng-show="pageId == '8'" class="body container">
+        <section>
+            <p>As you approach the gas station, you realize that it probably is deserted. You cannot see anyone inside, and all of the lights are off. Maybe this is because of the thunderstorm. But, at least you might find some shelter there from the driving rain.</p>
+            <p>As you hide from the rain under the shelter of the gas station, you look around, and you spy a telephone. Perhaps you could make a call?</p>
+            <p>Who will you call? And what are the odds... this abandoned filling station, miles from anywhere, miles from <i>nowhere</i>. Will you even hear a ring tone?</p>
+            <p>Can silences be deafening?</p>
+        </section>
+        <div class="footer">
+            <choice page="9" desc="call your friend" money="-1"></choice>
+            <choice page="3" desc="call a cab" money="-1"></choice>
+        </div>
+    </div>
+    <div ng-show="pageId == '9'" class="body container">
+        <section>
+            <p>Your friend is very happy to pick you up and you have a really good night, and make popcorn and watch a scary movie. The thunderstorm makes the movie pretty scary.</p>
+            <p>The next day you go back to pick up your car. It would have been a very long walk in the rain if you had not found that gas station.</p>
+            <p>Congratulations!</p>
+        </section>
+        <div class="footer">
+            <!-- <choice page="Section 1" href="http://newnormanirl.blogspot.ca/search/label/" desc="Keep reading"></choice> -->
+            <choice page="1" desc="go back to the beginning"></choice>
+        </div>
+    </div>
+    <div ng-show="pageId == '10'">
+        <div class="body" ng-switch="moxie">
+             <h1>The Gymnasium</h1>
+
+            <p>This is the gymnasium. You can lift weights here or do pushups.</p>
+            <p ng-switch-when="4">You are really starting to feel stronger. Actually, you feel terrible, but perhaps you are ready to lift the big weights now.</p>
+            <p ng-switch-when="5">They don't call them the big weights for nothing. You can barely lift them, but you actually are starting to feel pretty good about yourself now.</p>
+        </div>
+        <div class="footer" ng-switch="moxie">
+            <choice ng-switch-when="4" page="10" desc="lift some weights" moxie="+1" mojo="-1"></choice>
+            <choice ng-switch-when="5" page="11" desc="go get your car"></choice>
+            <choice page="1" desc="give up"></choice>
+            <choice page="10" desc="do some pushups" moxie="+1" mojo="-2"></choice>
+        </div>
+    </div>
+    <div ng-show="pageId == '11'" class="body">
+        <p>You leave the gym and you are tired, so you get in your car to drive to your friend's house. There is a flash of lightning in the distance.</p>
+        <p>In the beginning: in the beginning, there was a spark, and then it turned out that there was another that had been there before, before the spark had lighted.</p>
+        <div class="footer">
+            <choice page="1" desc="go back to the beginning"></choice>
+        </div>
+    </div>
+    <!-- <div class="footer2">&nbsp;&nbsp;&nbsp;Mojo: {{mojo}}&nbsp;&nbsp;Moxie: {{moxie}}&nbsp;&nbsp;Money: {{money}}</div> -->

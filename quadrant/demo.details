@@ -1,3 +1,4 @@
+Requires d3.js - use something like http://jsfiddle.net/gh/get/d3/3.0.4/phollott/portfolio/tree/master/quadrant/
 ---
 name: Portfolio Angular Demo
 description: Some description, please keep it in one line

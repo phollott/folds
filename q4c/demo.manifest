@@ -1,0 +1,9 @@
+---
+name: Portfolio Angular Demo
+description: Some description, please keep it in one line
+authors:
+- Piers Hollott
+normalize_css: no
+wrap: l
+panel_js: 0
+panel_css: 0

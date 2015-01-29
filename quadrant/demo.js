@@ -5,7 +5,7 @@ function showScatterPlot(data) {
 var margins = {
 "left": 40,
 "right": 30,
-"top": 30,
+"top": 10,
 "bottom": 30
 };
 var width = 400;

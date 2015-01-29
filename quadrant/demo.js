@@ -8,8 +8,8 @@ var margins = {
 "top": 30,
 "bottom": 30
 };
-var width = 500;
-var height = 500;
+var width = 400;
+var height = 400;
 var domainwidth = width - margins.left - margins.right;
 var domainheight = height - margins.top - margins.bottom;
 // this will be our colour scale. An Ordinal scale.
@@ -72,14 +72,14 @@ return d.name;
 });
 // quadrant grid: horizontal rules
 svg.append("g").attr("class", "qxgrid")
-.call(xAxis.tickFormat("").tickSize(450).ticks(2));
+.call(xAxis.tickFormat("").tickSize(340).ticks(2));
 svg.select("g.qxgrid").selectAll(".tick")
 .style('opacity', 0.4)
 .style('stroke', "#000");
 svg.select("g.qxgrid .domain").style('fill', 'none');
 // quadrant grid: vertical rules
 svg.append("g").attr("class", "qygrid")
-.call(yAxis.tickFormat("").tickSize(-430).ticks(2));
+.call(yAxis.tickFormat("").tickSize(-330).ticks(2));
 svg.select("g.qygrid").selectAll(".tick")
 .style('opacity', 0.4)
 .style('stroke', "#000");

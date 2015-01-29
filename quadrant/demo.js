@@ -117,53 +117,29 @@ var items = [{
     "name": "Mobile Applications", "category": "promoting",
     "price": 2, "rating": 7, "size": 5
 }, {
-"name": "RWD",
-"category": "promoting",
-"price": 1,
-"rating": 8,
-"size": 5
+    "name": "RWD", "category": "promoting",
+    "price": 1, "rating": 8, "size": 5
 }, {
-"name": "PhoneGap/Cordova",
-"category": "promoting",
-"price": 1.5,
-"rating": 9,
-"size": 5
+    "name": "PhoneGap/Cordova", "category": "promoting",
+    "price": 1.5, "rating": 9, "size": 5
 }, {
-"name": "Salesforce1 (PaaS)",
-"category": "fostering",
-"price": 7,
-"rating": 7,
-"size": 5
+    "name": "Salesforce1 (PaaS)", "category": "fostering",
+    "price": 7, "rating": 7, "size": 5
 }, {
-"name": "AngularJS",
-"category": "fostering",
-"price": 9,
-"rating": 9,
-"size": 5
+    "name": "AngularJS", "category": "fostering",
+    "price": 9, "rating": 9, "size": 5
 }, {
-"name": "Titanium",
-"category": "fostering",
-"price": 5.5,
-"rating": 5.5,
-"size": 5
+    "name": "Titanium", "category": "fostering",
+    "price": 5.5, "rating": 5.5, "size": 5
 }, {
-"name": "d3.js",
-"category": "fostering",
-"price": 8,
-"rating": 6,
-"size": 5
+    "name": "d3.js", "category": "fostering",
+    "price": 8, "rating": 6, "size": 5
 }, {
-"name": "scala",
-"category": "discovering",
-"price": 1,
-"rating": 1,
-"size": 5
+    "name": "scala", "category": "discovering",
+    "price": 1, "rating": 1, "size": 5
 }, {
-"name": "NoSQL",
-"category": "discovering",
-"price": 3,
-"rating": 2,
-"size": 5
+    "name": "NoSQL", "category": "discovering",
+    "price": 3, "rating": 2, "size": 5
 }];
 
 // native xhr stuff - not working

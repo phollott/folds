@@ -1,22 +1,3 @@
-// native xhr stuff - not working
-var xhr = new XMLHttpRequest(),
-    end = '/phollott/portfolio/tree/master/quadrant/',
-    url ='/gh/get/response.json' + end;
-    xhr.open('GET', url);
-    xhr.send();
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            if (xhr.responseXML) {
-                alert('xmlResponse');
-                xmlresponse = xhr.responseXML;
-            } else if (xhr.responseText) {
-                alert('textResponse');
-                xmlresponse = xmlhttp.responseText;
-            } else alert('neither');
-        }
-    }
-
 // call the method below
 showScatterPlot(items);
 function showScatterPlot(data) {
@@ -127,4 +108,23 @@ itemGroup.append("text")
 // this shouldn't be a surprising statement.
 return d.name;
 });
+}
+
+// native xhr stuff - not working
+var xhr = new XMLHttpRequest(),
+    end = '/phollott/portfolio/tree/master/quadrant/',
+    url ='/gh/get/response.json' + end;
+    xhr.open('GET', url);
+    xhr.send();
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        if (xhr.responseXML) {
+            alert('xmlResponse');
+            xmlresponse = xhr.responseXML;
+        } else if (xhr.responseText) {
+            alert('textResponse');
+            xmlresponse = xmlhttp.responseText;
+        } else alert('neither');
+    }
 }

@@ -1,5 +1,5 @@
 // call the method below
-showScatterPlot(items);
+//showScatterPlot(items);
 function showScatterPlot(data) {
 // just to have some space around items.
 var margins = {
@@ -141,6 +141,8 @@ var items = [{
     "name": "NoSQL", "category": "discovering",
     "price": 3, "rating": 2, "size": 5
 }];
+
+showScatterPlot(items);
 
 // native xhr stuff - not working
 var xhr = new XMLHttpRequest(),

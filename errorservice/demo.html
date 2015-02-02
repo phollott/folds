@@ -1,0 +1,8 @@
+<div ng-app="testApp" ng-controller="testController">
+    <!-- throw an exception from a controller -->
+    <button ng-click="testController()">Test Controller</button>
+    <!-- handle an error callback from a controller -->
+    <button ng-click="testService()">Test Service</button>
+
+    <div ng-controller="errorController" ng-show="showErrors" ng-bind="errorText"></div>
+</div>

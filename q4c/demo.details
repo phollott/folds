@@ -1,8 +1,10 @@
+Requires AngularJS
+http://jsfiddle.net/gh/get/AngularJS/1.2.1/phollott/portfolio/tree/master/q4c/
 ---
-name: Portfolio Angular Demo
+name: Portfolio Angular Demo: Rhizome Q4C
 description: Some description, please keep it in one line
 authors:
- - Piers Hollott
+- Piers Hollott
 normalize_css: no
 wrap: l
 panel_js: 0

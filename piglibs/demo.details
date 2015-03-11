@@ -1,0 +1,11 @@
+Requires AngularJS
+http://jsfiddle.net/gh/get/AngularJS/1.2.1/phollott/portfolio/tree/master/piglibs/
+---
+name: Portfolio Angular Demo - Pig Libs
+description: Mad Libs mashup with Pig and the Box - AngularJS Custom Directives
+authors:
+- Piers Hollott
+normalize_css: no
+wrap: h
+panel_js: 0
+panel_css: 0

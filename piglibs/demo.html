@@ -1,0 +1,257 @@
+<!-- ng-app and ng-controller hook AngularJS -->
+<div ng-app="libber" ng-controller="libberCtrl" class="left book">
+    
+<h2>The Pig and the Box: Mad Lib Edition</h2>
+
+    <div class="lib-pick">
+        <div>
+            <label>An animal:</label>
+            <input type="text" ng-model="animal[0]" />
+        </div>
+        <div>
+            <label>Another word for that animal:</label>
+            <input type="text" ng-model="animal[1]" />
+        </div>
+        <div>
+            <label>An animal:</label>
+            <input type="text" ng-model="animal[2]" />
+        </div>
+        <div>
+            <label>An animal:</label>
+            <input type="text" ng-model="animal[3]" />
+        </div>
+        <div>
+            <label>An animal:</label>
+            <input type="text" ng-model="animal[4]" />
+        </div>
+        <div>
+            <label>An animal:</label>
+            <input type="text" ng-model="animal[5]" />
+        </div>
+        <div>
+            <label>An animal that should never wear a tutu:</label>
+            <input type="text" ng-model="animal[6]" />
+        </div>
+        <div>
+            <label>A vegetable:</label>
+            <input type="text" ng-model="vegetable[0]" />
+        </div>
+        <div>
+            <label>Another vegetable:</label>
+            <input type="text" ng-model="vegetable[1]" />
+        </div>
+        <div>
+            <label>Another vegetable:</label>
+            <input type="text" ng-model="vegetable[2]" />
+        </div>
+        <div>
+            <label>A kind of fruit:</label>
+            <input type="text" ng-model="fruit[0]" />
+        </div>
+        <div>
+            <label>Another kind of fruit:</label>
+            <input type="text" ng-model="fruit[1]" />
+        </div>
+        <div>
+            <label>A questionable fruit:</label>
+            <input type="text" ng-model="fruit[2]" />
+        </div>
+        <div>
+            <label>A first name:</label>
+            <input type="text" ng-model="name[0]" />
+        </div>
+    </div>
+    <section ng-show="pageId == '1'" class="page">
+        
+<h2>The {{animal[0] | capitalize}} and the Box</h2>
+
+        <p>Once upon a time, in a small house in the country, there lived a lonely old {{animal[0]}} named {{animal[0] | capitalize}}. Like most {{animal[0]}}s, he did not have a lot. Some days, he barely had enough food to eat. He was quite the unhappy {{animal[1]}}.</p>
+        <p>One morning, {{animal[0] | capitalize}} found an especially large turnip in his garden.</p>
+        <p>"That is one big {{vegetable[0]}}," he said to himself. "I don't remember planting any {{vegetable[0]}}s. Not even giant ones. This has to go."</p>
+        <p>So {{animal[0] | capitalize}} pulled, and he yanked, and pulled some more until ...</p>
+        <p><b>POP!</b>
+
+        </p>
+        <p>The {{vegetable[0]}} shot out of the ground and broke in two!</p>
+        <div class="footer">
+            <choose page="2" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '2'">
+        <p>Inside the {{vegetable[0]}} was a plain wooden box.</p>
+        <p>"What an odd place to keep a box," said {{animal[0] | capitalize}}, "Usually, you keep the <i>{{vegetable[0]}}s</i> in a <i>box</i>, not the other way around. What silly person is going around putting boxes in {{vegetable[0]}}s?"</p>
+        <p>{{animal[0] | capitalize}} decided the box was a great place to put {{vegetable[1]}}s. So he picked a {{vegetable[1]}} from his garden and threw it into the box.</p>
+        <p>Just then, something amazing happened! The box tipped over, and out of it spilled TWENTY-SEVEN {{vegetable[1] | uppercase}}S!</p>
+        <p>{{animal[0] | capitalize}} said to himself: "I am quite certain I did not throw twenty-seven {{vegetable[1]}}s in there just now. This makes as much sense as a {{animal[6]}} wearing a tutu."</p>
+        <p>{{animal[0] | capitalize}} had to make sure he wasn't going crazy. He very carefully threw just ONE {{vegetable[2]}} into the box. In an instant, the box tipped over, and TWENTY-SEVEN {{vegetable[2] | uppercase}}S DROPPED OUT!</p>
+        <div class="footer">
+            <choose page="3" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '3'">
+        <p>{{animal[0] | capitalize}} freaked out. He had a magic box! He was so happy he nearly peed his pants. He knew right away that he did not want to let anyone else use the box, because it belonged to <i>him</i>. Anyway, they would probably want to copy stinky things like old eggs and garlic.</p>
+        <p>So {{animal[0] | capitalize}} put a sign next to the box that read:</p>
+        <br/>
+        <p>
+            <center><b>MAGIC BOX<br/>ONLY {{animal[0] | uppercase}} MAY USE IT<br/>GO AWAY</b>
+
+            </center>
+        </p>
+        <p>Then he carried his twenty-seven {{vegetable[1]}}s and twenty-seven {{vegetable[2]}}s inside his house.</p>
+        <p>Before he could even close the door, a crazy {{animal[5]}} ran up and started dancing like he had bees in his underwear.</p>
+        <div class="footer">
+            <choose page="4" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '4'">
+        <p>"Lolipop Jones!" shouted the {{animal[5]}}.</p>
+        <p>"What?" asked {{animal[0] | capitalize}}.</p>
+        <p>"Lllllllolipop Jones!" replied the {{animal[5]}}, so {{animal[0] | capitalize}} slammed the door and went back to his dinner.</p>
+        <p>
+            <center><b>BLAM BLAM BLAM BLAM BLAM! </b>
+
+            </center>
+        </p>
+        <br/>
+        <p>Someone knocked at the door and scared {{animal[0] | capitalize}} right onto his bum. He ran to the door, opened the door, and there on the doorstep was a {{animal[1]}} named {{animal[1] | capitalize}}.</p>
+        <p>"I would like to use your magic box please," said {{animal[1] | capitalize}}, "I want to copy an {{fruit[0]}}, and I will pay you one gold coin!"</p>
+        <p>"Oh, all right," said {{animal[0] | capitalize}}.</p>
+        <div class="footer">
+            <choose page="5" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '5'">
+        <p>They went outside to the box, and {{animal[0] | capitalize}} let {{animal[1] | capitalize}} throw her {{fruit[0]}} inside. The box tipped right over and TWENTY-SEVEN {{fruit[0] | uppercase}}S DROPPED OUT!</p>
+        <p>"Wacky-doodle-dandy!" said {{animal[1] | capitalize}}.</p>
+        <p>"Wait a second!" said {{animal[0] | capitalize}}, "What are you going to do with these {{fruit[0]}}s? {{animal[1] | capitalize}}s don't <i>eat</i> {{fruit[0]}}s."</p>
+        <p>"Well... " began {{animal[1] | capitalize}}.</p>
+        <p>"You LIE!" shouted {{animal[0] | capitalize}}, and he got a bucket from his house.</p>
+        <p>"The {{fruit[0]}}s go in here," {{animal[0] | capitalize}} said, "This is a <i>magic</i> bucket. If anyone but YOU tries to take an {{fruit[0]}} out of this bucket, all the {{fruit[0]}}s will <b>EXPLODE!</b>"</p>
+        <p>"But but but..." said {{animal[1] | capitalize}}.</p>
+        <p>"Go away!" shouted {{animal[0] | capitalize}}, "I don't trust you at all!"</p>
+        <p>He sent {{animal[1] | capitalize}} away with her bucket full of {{fruit[0]}}s, and went back inside his house to find his pot boiling over.</p>
+        <div class="footer">
+            <choose page="6" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '6'">
+        <p>
+            <center><b>BLAM BLAM BLAM BLAM BLAM! </b>
+
+            </center>
+        </p>
+        <br/>
+        <p>Someone knocked at the door and scared {{animal[0] | capitalize}} right onto his nose. He ran to the door, opened the door, and there on the doorstep was a cute little {{animal[2]}} named {{animal[2] | capitalize}}.</p>
+        <p>"Lolipop Jones!" yelled {{animal[3] | capitalize}}.</p>
+        <p>"WHAT?" said {{animal[0] | capitalize}}.</p>
+        <p>"I dunno, a crazy {{animal[5]}} made me say it," said {{animal[3] | capitalize}}. "Anyway, I need to copy a {{fruit[1]}} for my grandma please! I brought you a gold coin, too!"</p>
+        <p>"Oh, all right," said {{animal[0] | capitalize}}.</p>
+        <p>They went outside to the box, and {{animal[0] | capitalize}} let {{animal[3] | uppercase}} throw his {{fruit[1]}} inside. The box tipped right over and TWENTY-SEVEN {{fruit[1] | uppercase}}S DROPPED OUT!</p>
+        <p>"Crazy, dude!" said {{animal[3] | capitalize}}.</p>
+        <div class="footer">
+            <choose page="7" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '7'">
+        <p>"Wait a second!" said {{animal[0] | capitalize}}, "What are you going to do with these {{fruit[1]}}s? {{animal[3]}}s don't <i>eat</i> {{fruit[1]}}s."</p>
+        <p>"Heh, funny story..." began {{animal[3] | uppercase}}.</p>
+        <p>"You LIE!" shouted {{animal[0] | capitalize}}, and he got another bucket from his house.</p>
+        <p>"The {{fruit[1]}}s go in here,</p>{{animal[0] | capitalize}} said,
+        <p>This is a <i>magic</i> bucket. If I find out you're doing something bad with those {{fruit[1]}}s, all I have to do is jump up and down <i>three</i> times, and all the {{fruit[1]}}s will <b>DISAPPEAR!</b>"</p>
+        <p>"But but but..." said {{animal[3] | capitalize}}.</p>
+        <p>"Go away!" shouted {{animal[0] | capitalize}}, "I don't trust you either!"</p>
+        <p>He sent {{animal[3] | capitalize}} away with his bucket full of {{fruit[1]}}s, and went back inside his house to find his {{vegetable[1]}}s on fire.</p>
+        <div class="footer">
+            <choose page="8" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '8'">
+        <p>
+            <center><b>BLAM BLAM BLAM BLAM BLAM! </b>
+
+            </center>
+        </p>
+        <p>Someone knocked at the door and scared {{animal[0] | capitalize}} right onto his eyeball! He ran to the door, opened the door, and there on the doorstep was a slow little {{animal[4]}} named {{name[0] | capitalize}}.</p>
+        <p>"I've got a {{fruit[2]}}," said {{name[0] | capitalize}}.</p>
+        <p>"It's lovely," said {{animal[0] | capitalize}}.</p>
+        <p>"I'd like a bunch," said {{name[0]}}, "And I've got a gold coin, too."</p>
+        <p>{{animal[0] | capitalize}} just sighed.</p>
+        <p>They went outside to the box, and {{animal[0] | capitalize}} let {{name[0] | capitalize}} throw his {{fruit[2]}} inside. The box tipped right over and TWENTY-SEVEN {{fruit[2] | uppercase}}S DROPPED OUT!</p>
+        <p>"Woo. Hoo." said {{name[0] | capitalize}} slowly.</p>
+        <div class="footer">
+            <choose page="9" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '9'">
+        <p>"Wait a second!" said {{animal[0] | capitalize}}, "What are you going to do with these {{fruit[2]}}s? {{animal[4] | capitalize}}s don't <i>eat</i> {{fruit[2]}}s."</p>
+        <p>{{name[0] | capitalize}} took so long to reply that {{animal[0] | capitalize}} thought he must be lying about <i>something</i>
+
+        </p>
+        <p>"You LIE!" shouted {{animal[0] | capitalize}}, and he got another bucket from his house.</p>
+        <p>"The {{fruit[2]}}s go in here," {{animal[0] | capitalize}} said, "This is a <i>magic</i> bucket. If you try and bring them anywhere but your kitchen, the bucket will <b>FLY BACK TO ME!</b>"</p>
+        <p>"But but but..." said {{name[0] | capitalize}}.</p>
+        <p>"I don't trust you at all, and you smell like POO!" shouted {{animal[0] | capitalize}}.</p>
+        <p>He sent {{name[0] | capitalize}} away with his bucket full of {{fruit[2]}}s, and went back inside his house to find his {{vegetable[2]}}s had turned to mush.</p>
+        <div class="footer">
+            <choose page="10" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '10'">
+        <p>Before he could even close the door, the crazy {{animal[5]}} was there, dancing like a lunatic and blowing bubbles from his nose.</p>
+        <p>"Lllllllolipop Jones!" sang the {{animal[5]}}, and ran away.</p>
+        <p>{{animal[0] | capitalize}} was so mad that he started jumping up and down in fury.</p>
+        <p>"Go away!" he screamed, "Go away and leave me alone, you crazy little furball!"</p>
+        <p>Just then, {{animal[2] | capitalize}} came bounding up the road. She was covered from head to toe in sticky, gooey {{fruit[0]}} sauce.</p>
+        <p>"Yoooooou stinky {{animal[0]}}!" yelled {{animal[2] | capitalize}}.</p>
+        <p>"What happened to YOU?" gasped {{animal[0] | capitalize}}.</p>
+        <p>"My baby {{animal[2]}}ling tried to eat an {{fruit[0]}} for snack time, and ALL THE {{fruit[0] | uppercase}}S EXPLODED! Why can't I share the {{fruit[0]}}s with my family, {{animal[0] | capitalize}}?"</p>
+        <p>"Oh..." said {{animal[0] | uppercase}}.</p>
+        <div class="footer">
+            <choose page="11" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '11'">
+        <p>Yoooooou ugly {{animal[0]}}!" yelled {{animal[3] | capitalize}}, running up the road.</p>
+        <p>"What happened to YOU?" gasped {{animal[0] | capitalize}} and {{animal[2] | capitalize}}.</p>
+        <p>"My grandma was making {{fruit[1]}} cream pie!" {{animal[3] | capitalize}} cried, "But when it came out of the oven, ALL THE {{fruit[1] | uppercase}}S HAD DISAPPEARED! She was so mad, she THREW IT AT ME! You jumped three times, DIDN'T YOU, {{animal[0] | uppercase}}?!" said {{animal[3] | capitalize}}.</p>
+        <p>"Um... well..." said {{animal[0] | capitalize}}.</p>
+        <div class="footer">
+            <choose page="12" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '12'">
+        <p>"Yoooooou... <i>{{animal[0] | capitalize}}!</i> yelled {{name[0] | capitalize}}, running up the road wearing a {{fruit[2]}} instead of his shell.</p>
+        <p>"What happened to YOU?" gasped {{animal[0] | capitalize}} and {{animal[1] | capitalize}} and {{animal[2] | capitalize}}.</p>
+        <p>"I tried to eat a {{fruit[2]}} in my dining room, and all of a sudden the bucket flew away! One coconut hit me so hard, I ended up INSIDE IT! Why do I always have to eat in my kitchen, {{animal[0] | capitalize}}?"</p>
+        <p>"Er... well..." said {{animal[0] | capitalize}}.</p>
+        <p>"You look funny," said {{animal[2] | capitalize}} to {{name[0] | capitalize}}, "Can I roll you?"</p>
+        <div class="footer">
+            <choose page="13" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '13'">
+        <p>{{animal[0] | capitalize}} was so upset he sat down and started to cry.</p>
+        <p>"This magic box is nothing but trouble!" he sobbed, "It makes {{fruit[0]}}s explode, it makes {{fruit[1]}}s disappear, and it makes {{fruit[2]}}s eat {{animal[4]}}s!"</p>
+        <p>"It doesn't do <i>any</i> of those things!" snapped {{animal[2] | capitalize}}, "YOU did all those things! You should learn to SHARE!"</p>
+        <p>{{animal[2] | capitalize}} was <i>right!</i> The magic box was doing what it was supposed to do! It was <i>{{animal[0] | capitalize}}</i> who was nothing but trouble!</p>
+        <p>{{animal[0] | capitalize}} decided to make things right. He decided not to use any more magic buckets ever again, and he replaced the old nasty sign with a new one that read:</p>
+        <br/>
+        <p>
+            <center><b>MAGIC SHARING BOX<br/>USE IT!</b>
+
+            </center>
+        </p>
+        <div class="footer">
+            <choose page="14" desc="next"></choose>
+        </div>
+    </section>
+    <section ng-show="pageId == '14'">
+        <p>After that, {{animal[0] | capitalize}}'s life was much better.</p>
+        <p>People came from far and wide to use his magic box. Whenever they got their copies, they always left him some, too. {{animal[0] | capitalize}} especially liked the vegetables.</p>
+        <p>After a while, {{animal[0] | capitalize}} became an expert at cooking, and opened a family restaurant with booths and jukeboxes and chairs made out of upside-down buckets.</p>
+        <p>He called the restaurant "Lolipop Jones", but he didn't know why.</p>
+        <p>Everything turned out just fine.</p>
+        <br/>
+        <p>That is, until the crazy {{animal[5]}} threw HIMSELF into the box...</p>
+    </section>
+</div>

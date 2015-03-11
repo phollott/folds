@@ -1,0 +1,52 @@
+body {
+    background-color:#BDB76B;
+    font: 100% georgia, sans-serif;
+    line-height: 1.6;
+    color: #555753;
+}
+button {
+    font: italic normal 0.8em georgia, sans-serif;
+    letter-spacing: 1px;
+    color: #7D775C;
+}
+span.init {
+    width: 0.7em;
+    font-size: 400%;
+    font-family: algerian, courier;
+    line-height: 80%;
+}
+.book {
+    position: relative;
+    font: 75% georgia, sans-serif;
+    width: 420px;
+    height: 560px;
+    line-height: 1.88889;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #F5F5DC;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+div.lib-pick {
+    height:88px;
+    overflow-y:scroll;
+    width:96%;
+    border-bottom: thin dotted;
+}
+.footer {
+    position: absolute;
+    bottom: 0px;
+    left: 310px;
+    height: 28px;
+}
+div.header {
+    visibility: hidden;
+}
+div.nav {
+    position: absolute;
+    top: 0px;
+}
